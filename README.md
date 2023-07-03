@@ -97,7 +97,7 @@ train = pd.DataFrame(train_data, columns=['File', 'DiseaseID','Disease Type'])
 train.head()
 ```
 
-| |	File |	DiseaseID	Disease | Type |
+| |	File |	DiseaseID |	Disease Type |
 | --- | --- | --- | --- |
 | 0	| COVID/Covid (230).png	| 0	| COVID |
 | 1	| COVID/Covid (1195).png |	0	| COVID |
@@ -111,6 +111,14 @@ train = train.sample(frac=1, random_state=SEED)
 train.index = np.arange(len(train)) # Reset indices
 train.head()
 ```
+
+| | File	| DiseaseID	| Disease Type |
+| --- | --- | --- | --- |
+| 0	| COVID/Covid (54).png	| 0 |	COVID |
+| 1	| COVID/Covid (1035).png |	0 |	COVID |
+| 2	| non-COVID/Non-Covid (21).png	1 |	non-COVID |
+| 3	| non-COVID/Non-Covid (248).png |	1 |	non-COVID |
+| 4 |	COVID/Covid (409).png	| 0 |	COVID |
 
 ```
 import pandas_profiling as pp
@@ -128,7 +136,7 @@ plt.figure(figsize=(12, 12))
 plt.show()
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/fae35bfb-33f6-445b-9b2a-a00b948552fb)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/b47024cb-eef5-4bc8-9e10-9b95d698ba6f)
 
 ```
 def plot_defects(defect_types, rows, cols):
@@ -146,7 +154,7 @@ def plot_defects(defect_types, rows, cols):
 plot_defects('COVID', 3, 3)
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/b961cc95-fcf1-4dcf-b44e-5437cd07c851)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/1fde1524-c69a-46f1-ab4a-95caa267870e)
 
 ```
 def plot_defects(defect_types, rows, cols):
@@ -164,7 +172,7 @@ def plot_defects(defect_types, rows, cols):
 plot_defects('non-COVID', 3, 3)
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/2419d5b4-6c47-4f0b-8c9f-e95326567b2d)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/dfa1dc4e-aacf-46ec-a6ab-ff8e61a60eeb)
 
 ```
 IMAGE_SIZE = 64
@@ -230,7 +238,7 @@ for i in range(3):
     ax[i].set_title(disease_types[np.argmax(Y_train[i])])
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/dee2ce6e-e97d-4d14-b789-f80ee50ac67d)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/32ac1b20-1c61-41f9-afd5-9a53284123e1)
 
 ```
 EPOCHS = 100
@@ -290,7 +298,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/keras-applicatio
 Model: "functional_1"
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/a27a70aa-8cc6-43cf-a9cb-895e02319477)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/b8acf3a8-947d-43a5-bcad-62e7638e4dbc)
 
 ```
 from tensorflow.keras.utils import plot_model
@@ -299,7 +307,7 @@ plot_model(model, to_file='convnet.png', show_shapes=True,show_layer_names=True)
 Image(filename='convnet.png') 
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/c379850d-55d6-4702-b716-c9214f61df70)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/29cf0769-59ab-4ffb-86af-a5d504d18ed4)
 
 ```
 # Fits the model on batches with real-time data augmentation
@@ -1354,7 +1362,7 @@ ax.set_ylabel('Actual', fontsize=40)
 ax.set_xlabel('Predicted', fontsize=40)
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/d4dd4119-f77f-4645-a380-64a342cdff9f)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/3006ed23-11a4-446d-b53c-5afcb8c35cab)
 
 ```
 # accuracy plot 
@@ -1376,7 +1384,7 @@ plt.legend(['train', 'test'], loc='best')
 plt.show()
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/5e37b8b3-c7e1-458c-aeca-501db54686dd)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/be5b8933-c54e-436f-8b17-a20598ff581c)
 
 > 처음부터 좋은 결과인 이유는 모델을 실수로 2번 돌린 코드이기 때문
 
@@ -1406,7 +1414,7 @@ print(ind)
 print('Prediction:',disease_class[ind])
 ```
 
-![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/8296d271-c2ee-4879-8c41-83f9d679d7cb)
+![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/0524607a-b61d-4fc1-a56a-07dea5444b7e)
 
 ```
 pix = np.array(img)
