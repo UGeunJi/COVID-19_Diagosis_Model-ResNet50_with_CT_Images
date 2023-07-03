@@ -1,6 +1,6 @@
-# :hospital: COVID19 Diagnosis with CT Images :computer:
+# :hospital: COVID-19 Diagnosis with CT Images :computer:
 
-> [Kaggle CT COVID19 Dataset page](https://www.kaggle.com/datasets/plameneduardo/sarscov2-ctscan-dataset)
+> [Kaggle CT COVID-19 Dataset page](https://www.kaggle.com/datasets/plameneduardo/sarscov2-ctscan-dataset)
 
 ![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/4f22df0f-17e5-4ab2-b416-c62d4f2a16bb)
 
@@ -128,7 +128,7 @@ plt.figure(figsize=(12, 12))
 plt.show()
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/fae35bfb-33f6-445b-9b2a-a00b948552fb)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/fae35bfb-33f6-445b-9b2a-a00b948552fb)
 
 ```
 def plot_defects(defect_types, rows, cols):
@@ -146,7 +146,7 @@ def plot_defects(defect_types, rows, cols):
 plot_defects('COVID', 3, 3)
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/b961cc95-fcf1-4dcf-b44e-5437cd07c851)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/b961cc95-fcf1-4dcf-b44e-5437cd07c851)
 
 ```
 def plot_defects(defect_types, rows, cols):
@@ -164,7 +164,7 @@ def plot_defects(defect_types, rows, cols):
 plot_defects('non-COVID', 3, 3)
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/2419d5b4-6c47-4f0b-8c9f-e95326567b2d)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/2419d5b4-6c47-4f0b-8c9f-e95326567b2d)
 
 ```
 IMAGE_SIZE = 64
@@ -230,7 +230,7 @@ for i in range(3):
     ax[i].set_title(disease_types[np.argmax(Y_train[i])])
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/dee2ce6e-e97d-4d14-b789-f80ee50ac67d)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/dee2ce6e-e97d-4d14-b789-f80ee50ac67d)
 
 ```
 EPOCHS = 100
@@ -290,7 +290,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/keras-applicatio
 Model: "functional_1"
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/a27a70aa-8cc6-43cf-a9cb-895e02319477)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/a27a70aa-8cc6-43cf-a9cb-895e02319477)
 
 ```
 from tensorflow.keras.utils import plot_model
@@ -299,7 +299,7 @@ plot_model(model, to_file='convnet.png', show_shapes=True,show_layer_names=True)
 Image(filename='convnet.png') 
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/c379850d-55d6-4702-b716-c9214f61df70)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/c379850d-55d6-4702-b716-c9214f61df70)
 
 ```
 # Fits the model on batches with real-time data augmentation
@@ -1354,7 +1354,7 @@ ax.set_ylabel('Actual', fontsize=40)
 ax.set_xlabel('Predicted', fontsize=40)
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/d4dd4119-f77f-4645-a380-64a342cdff9f)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/d4dd4119-f77f-4645-a380-64a342cdff9f)
 
 ```
 # accuracy plot 
@@ -1376,7 +1376,7 @@ plt.legend(['train', 'test'], loc='best')
 plt.show()
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/5e37b8b3-c7e1-458c-aeca-501db54686dd)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/5e37b8b3-c7e1-458c-aeca-501db54686dd)
 
 > 처음부터 좋은 결과인 이유는 모델을 실수로 2번 돌린 코드이기 때문
 
@@ -1406,7 +1406,7 @@ print(ind)
 print('Prediction:',disease_class[ind])
 ```
 
-![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/8296d271-c2ee-4879-8c41-83f9d679d7cb)
+![image](https://github.com/UGeunJi/ResNet50__Diagosis/assets/84713532/8296d271-c2ee-4879-8c41-83f9d679d7cb)
 
 ```
 pix = np.array(img)
