@@ -15,7 +15,7 @@ ResNet-50 is a convolutional neural network that is 50 layers deep. You can load
 ![image](https://github.com/UGeunJi/ResNet50_COVID19_Diagosis/assets/84713532/0e8ac762-5912-447d-80f4-968f099abfa4)
 
 
-## :clipboard: Mini Project (2021/04/01 ~ 2021/11/28) :date:
+## :clipboard: Graduation Thesis Project (2021/04/01 ~ 2021/11/28) :date:
 
 > :family: 팀명: Are you still there?
 - 김대영
